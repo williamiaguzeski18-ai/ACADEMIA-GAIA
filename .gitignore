@@ -1,0 +1,18 @@
+# Evitar material secreto, dados de clientes e artefatos de ambiente
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.*
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store
+.cache/
+tmp/
+data/clientes/
