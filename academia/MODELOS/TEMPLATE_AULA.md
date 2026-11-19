@@ -1,31 +1,38 @@
-# [ID] — [Título da aula]
+# [lesson_id] — [Título da aula]
 
-- Course ID: PENDENTE
-- Module ID: PENDENTE
-- Lesson ID: PENDENTE
-- Versão: 0.1.0
-- Estado: RASCUNHO
-- Data e fuso: PENDENTE_AFERICAO
-- Responsável: A_DESIGNAR
-- Fontes verificadas (IDs/URLs/versões/datas): PENDENTE
+- **course_id:** PENDENTE
+- **module_id:** PENDENTE
+- **lesson_id:** PENDENTE
+- **version:** 0.2.0 — MODELO
+- **status:** RASCUNHO — NÃO HOMOLOGADO
+- **responsavel / revisor:** A_DESIGNAR / PENDENTE
+- **data, hora, timezone, clock_source:** PENDENTE
+- **source_ids / URLs / versões / datas / licenças:** PENDENTE
+- **competency_id:** PENDENTE
 
-## Competência observável
-[O que o agente deve demonstrar?]
+## Objetivo e competência observável
+[O que o agente deverá demonstrar e em que condições?]
 
-## Pré-requisitos
-[Conhecimentos e capacidades esperadas]
+## Pré-requisitos e dependências
+[Conceitos e módulos anteriores; citar IDs de módulo quando disponíveis.]
 
-## Conceitos e demonstração autoral
-[Conteúdo a desenvolver; citar trechos externos com parcimônia]
+## Conteúdo didático e fundamentação
+[Explicação original; separar fonte, interpretação e informação NÃO VERIFICADA.]
 
-## Exemplo sintético
-[Entrada e saída ilustrativas, sem dados reais]
+## Demonstração com dados sintéticos
+[Entrada e saída ilustrativa, sem dados reais, segredos ou casos inéditos de avaliação.]
 
-## Exercício
-[Link ou ID]
+## Exercício público
+[Inserir `exercise_id` e link ao enunciado destinado ao agente. Não divulgar solução reservada.]
 
-## Avaliação
-[Critérios objetivos, erros críticos e gabarito]
+## Critérios públicos de aceite da aprendizagem
+[Comportamentos observáveis, formato exigido, tipos de erro, segurança e abstenção.]
 
-## Evidências / riscos / pendências
-[Preencher após execução de teste]
+## Avaliação independente
+[Referenciar `evaluation_id` ou protocolo de avaliação sem expor resultados esperados privados nem gabaritos efetivos.]
+
+## Evidências, riscos e lacunas
+[Preencher após atividade verificável; não presumir que a aula foi cursada.]
+
+## Revisão e changelog
+[Versão anterior, diferenças, fonte de aprovação e próxima revisão.]

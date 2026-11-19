@@ -1,23 +1,37 @@
-# Equivalência de carga e tokens
+# Equivalência de carga e tokens — protocolo de calibração G02
 
 - **ID:** GAIA-EDU-TOKENS
-- **Versão:** 0.1.0
+- **Versão:** 0.2.0
 - **Data:** 2026-11-19
-- **Estado:** ESTRUTURA BASE — NÃO HOMOLOGADA
+- **Estado:** PROCEDIMENTO DOCUMENTADO — CALIBRAÇÃO PENDENTE (G02)
 - **Responsável proposto:** Coordenação pedagógica
-- **Escopo:** Formação técnica; sem execução operacional
-- **Fontes:** links e versões serão aferidos ao elaborar cada aula
-- **Pendência:** revisão humana antes de publicar conteúdo curricular como aprovado
+- **Escopo:** medir carga documental com evidência, não inferir competência
 
-## Princípio
-As quatro formações têm **o mesmo orçamento curricular-alvo `T`**, ainda **não definido**. Proposta inicial: 20% `T` base comum, 80% `T` conteúdo especializado. A cobertura do agente 00 é transversal; dos agentes 01–03 é aprofundada por domínio.
+## Princípio e parâmetros ainda não fixados
+As quatro formações terão o mesmo orçamento curricular-alvo **T = NÃO DEFINIDO** até escolha de referência e medição dos materiais reais. Proporção inicial **20% T para base comum** e **80% T para especialização**, **NÃO HOMOLOGADA**. A base comum é guardada uma só vez e contabilizada uma vez no total de cada curso que a utiliza.
 
-## Procedimento antes da homologação
-1. Escolher modelo/tokenizer de referência e registrar versão.
-2. Definir `T` e método de contagem (materiais escritos versus execução).
-3. Estimar tokens por aula e avaliar se cabem na janela de contexto.
-4. Medir arquivos reais, não por quantidade de páginas.
-5. Ajustar densidade didática para manter equivalência.
-6. Registrar desvio permitido e aprovação humana.
+`T` ≠ janela de contexto, tokens efetivamente consumidos, custo de inferência ou aprendizado permanente.
 
-**Atenção:** contagem de tokens de apostila não equivale a tokens de inferência, custo, aprendizado permanente ou habilidade. Não preencher `T` por estimativa sem medições.
+| Parâmetro | Valor |
+|---|---|
+| `T` tokens de material por curso | NÃO DEFINIDO |
+| Tokenizer e versão/snapshot | NÃO DEFINIDO |
+| Regra de limpeza/normalização de Markdown | NÃO DEFINIDA |
+| Tolerância percentual de desvio | NÃO DEFINIDA |
+| Escopo de contagem (fonte, exemplos, exercícios) | NÃO DEFINIDO |
+| Limite por execução e estratégia de recuperação | NÃO DEFINIDOS |
+| Responsável pela aprovação | PROPRIETÁRIO |
+
+## Procedimento medível G02
+1. Escolher modelo/tokenizer compatível, versão exata e ferramenta reprodutível de contagem; indicar referências oficiais.
+2. Fixar e justificar o que entra no orçamento: texto das aulas, exemplos, enunciados e eventual metadado. Separar URLs, gabaritos privados, logs e histórico operacional.
+3. Padronizar codificação UTF-8, quebras de linha, tratamento de Markdown e arquivos excluídos.
+4. Produzir inventário `file_path`, `git_blob_sha`, `course_id`, `module_id`, `token_count`, `tokenizer_version` e `measured_at`.
+5. Calcular por curso `B` (base comum, contada uma vez) e `S_i` (especialização), com `T_i=B+S_i`.
+6. Para cada curso, calcular `desvio_i = |T_i-T|/T × 100%` apenas se `T>0`; qualquer tolerância exige decisão humana.
+7. Verificar execução com retrieval/chunking e janelas de contexto reais; não presumir carregamento simultâneo.
+8. Documentar diferenças em profundidade e resultados das avaliações. Igualdade numérica de tokens não prova equivalência de competência.
+9. Registrar versão da contagem, evidências, data/hora/fuso/relógio e responsável; submeter a homologação.
+
+## Aceite P03
+O método é especificado neste G01. **Nenhum valor T, tokenizer, tolerância, medição ou conclusão de equivalência está aprovado ou executado.** Esses resultados pertencem ao G02.
